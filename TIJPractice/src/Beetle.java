@@ -1,4 +1,4 @@
-//shows the process of initialization
+//shows the process of initialization.
 
 class Insect {
 	private int i = 9;
