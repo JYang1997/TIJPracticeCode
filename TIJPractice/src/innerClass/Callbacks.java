@@ -51,7 +51,7 @@ class Callee2 extends MyIncrement {
 	}
 }
 
-class Caller {
+class Caller { 
 	
 	private Incrementable callbackReference;
 	
@@ -62,6 +62,7 @@ class Caller {
 	void go() { callbackReference.increment(); }
 	
 }
+
 public class Callbacks {
 	
 	public static void main(String [] args){
@@ -77,5 +78,36 @@ public class Callbacks {
 		caller1.go();
 		caller2.go();
 		caller2.go();
+		
+	}
+}
+
+//interesting overriding and cast problem
+
+abstract class Computer  {
+	public abstract void print();
+	
+	public void fun() {
+		System.out.println("from book");
+	}
+}
+
+class ComputerBook extends Computer{
+	
+	@Override
+	public void print() {
+		super.fun();
+	}
+	@Override
+	public void fun( ) {
+		System.out.println("from computerbook");
+	}
+	
+	
+	public static void main(String [] args){
+	
+		Computer book = new ComputerBook();
+		book.print();
+		//output : from computerBook
 	}
 }
