@@ -1,4 +1,7 @@
 package innerClass;
+
+import java.util.ArrayList;
+
 //an inner class cannot be overridden like a method.
 
 class Egg {
