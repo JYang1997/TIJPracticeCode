@@ -1,5 +1,10 @@
 package exception;
 class MyException extends Exception {
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
 	public MyException() {	}
 
 	public MyException(String msg) { 
@@ -30,5 +35,8 @@ public class FullConstructors{
 			}catch (MyException e) {
 				e.printStackTrace(System.out);
 			}
+			
 		}
+		
+		
 }
